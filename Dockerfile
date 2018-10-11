@@ -1,5 +1,5 @@
-#use 16.04 lts, install certbot-auto to get newest certbot version
-FROM ubuntu:16.04
+#use 18.04 lts, install certbot-auto to get newest certbot version
+FROM ubuntu:18.04
 
 #set default env variables
 ENV DEBIAN_FRONTEND=noninteractive \
@@ -21,7 +21,7 @@ RUN curl -o /root/certbot-auto https://dl.eff.org/certbot-auto && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 # Add supervisord.conf
-ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf 
+ADD supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Add certbot and make it executable
 ADD certbot.sh /root/certbot.sh
