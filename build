@@ -1,2 +1,2 @@
-docker build --rm -t hamburml/docker-flow-letsencrypt .
-docker push hamburml/docker-flow-letsencrypt:latest
+docker build --rm -t utopiatech/docker-flow-letsencrypt .
+docker push utopiatech/docker-flow-letsencrypt:latest
